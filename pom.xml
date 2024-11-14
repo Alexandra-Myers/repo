@@ -33,7 +33,7 @@
                 <version>${maven-deploy-plugin.version}</version>
                 <configuration>
                     <altDeploymentRepository>
-                        internal.repo::default::file://${project.build.directory}/mvn-artifact
+                        internal.repo::default::file:///path/to/mvn-repo
                     </altDeploymentRepository>
                 </configuration>
             </plugin>
@@ -54,8 +54,8 @@
     <distributionManagement>
         <repository>
             <id>internal.repo</id>
-            <name>Temporary Staging Repository</name>
-            <url>file://${project.build.directory}/mvn-artifact</url>
+            <name>Github Repo</name>
+            <url>file:///path/to/mvn-repo</url>
         </repository>
     </distributionManagement>
 
